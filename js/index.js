@@ -16,7 +16,6 @@ function updateBestSellers(nytimesBestSellers) {
     var weeksOnList = book.weeks_on_list || 'New this week!';
     var listing =
     '<div class="row">' +
-    '<div class="column">' +
         '<div id="' + book.rank + '" class="entry">' +
           '<p>' +
           '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-' + book.rank + '">' +
@@ -30,7 +29,6 @@ function updateBestSellers(nytimesBestSellers) {
             '<p>Last Week: ' + lastWeekRank + '</p>' +
             '<p>Weeks on list: ' + weeksOnList + '</p>' +
           '</div>' +
-        '</div>' +
         '</div>' +
         '</div>';
 

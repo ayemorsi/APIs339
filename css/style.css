@@ -80,20 +80,10 @@
   transition: 100ms;
 }
 
-.column {
-  /* display: flex; */
-  flex-direction: column;
-  flex-basis: 83%;
-  flex: 1;
-}
 
-/* Clear floats after the columns */
 .row {
   display: inline-grid;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 47%;
-  /* margin-right: unset; */
   margin: 12px;
 }
 
