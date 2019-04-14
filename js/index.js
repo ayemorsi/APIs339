@@ -1,4 +1,7 @@
-fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=cCn2CPVG9gMPcNPi21zWV4fV4MyyWZVQ', {
+var mykey = config.nytime_key;
+var mykey1 = config.isbn_key;
+
+fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=mykey', {
     method: 'get',
   })
   .then(response => { return response.json(); })
@@ -40,7 +43,7 @@ function updateBestSellers(nytimesBestSellers) {
 }
 
 function updateCover(id, isbn) {
-  fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=AIzaSyDOk0dWnIFTg7lce4P4ldT84T1iSbXp0X0", {
+  fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=mykey1", {
     method: 'get'
   })
   .then(response => { return response.json(); })
