@@ -1,5 +1,5 @@
-var mykey = config.nytime_key;
-var mykey1 = config.isbn_key;
+var mykey = config.NYTIME_KEY;
+var mykey1 = config.ISBN_KEY;
 
 fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=mykey', {
     method: 'get',
