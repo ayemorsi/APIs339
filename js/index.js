@@ -1,7 +1,7 @@
-var mykey = config.NYTIME_KEY;
-var mykey1 = config.ISBN_KEY;
+var nytimesKey = config.NYT_KEY;
+var googleBooksKey = config.GOOGLE_BOOKS_KEY;
 
-fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=mykey', {
+fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=' + nytimesKey, {
     method: 'get',
   })
   .then(response => { return response.json(); })
@@ -43,7 +43,7 @@ function updateBestSellers(nytimesBestSellers) {
 }
 
 function updateCover(id, isbn) {
-  fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=mykey1", {
+  fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=" + googleBooksKey, {
     method: 'get'
   })
   .then(response => { return response.json(); })
